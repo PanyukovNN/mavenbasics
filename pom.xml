@@ -11,6 +11,7 @@
 
     <modules>
         <module>sub-project-1</module>
+        <module>sub-project-2</module>
     </modules>
 
     <properties>
