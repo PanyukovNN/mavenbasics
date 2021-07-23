@@ -9,11 +9,42 @@
     <version>1.0</version>
     <packaging>jar</packaging>
 
+    <name>Maven basics project</name>
+    <description>Project for learning maven</description>
+    <url>http://mavenbasics.panyukovnn.com</url>
+
+    <properties>
+        <junit.version>4.13.2</junit.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <name>bintray</name>
+            <url>https://jcenter.bintray.com</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.12.0</version>
+
+            <scope>compile</scope> <!-- (default) code compilation + runtime + test -->
+<!--        <scope>provided</scope>     code compilation + test (lombok) -->
+<!--        <scope>runtime</scope>      runtime + test (jdbc) -->
+<!--        <scope>test</scope>         test (compile and runtime of tests)  -->
+
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
