@@ -9,9 +9,19 @@
     <version>1.0</version>
     <packaging>jar</packaging>
 
+    <name>Maven basics project</name>
+    <description>Project for the maven learning</description>
+    <url>http://mavenbasics.panyukovnn.com</url>
+
     <build>
         <finalName>MavenBasics</finalName>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
