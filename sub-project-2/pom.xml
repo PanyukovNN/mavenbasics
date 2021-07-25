@@ -39,10 +39,10 @@
         </dependency>
 
 
-<!--        <dependency>-->
-<!--            <groupId>com.panyukovnn</groupId>-->
-<!--            <artifactId>sub-project-1</artifactId>-->
-<!--            <version>1.0</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.panyukovnn</groupId>
+            <artifactId>sub-project-1</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 </project>
