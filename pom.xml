@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
 
     <name>Maven basics project</name>
-    <description>Project for learning maven</description>
+    <description>Project for the maven learning</description>
     <url>http://mavenbasics.panyukovnn.com</url>
 
     <properties>
