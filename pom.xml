@@ -9,42 +9,48 @@
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>Maven basics project</name>
-    <description>Project for learning maven</description>
-    <url>http://mavenbasics.panyukovnn.com</url>
+    <build>
+        <finalName>MavenBasics</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <verbose>true</verbose>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
 
-    <properties>
-        <junit.version>4.13.2</junit.version>
-    </properties>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M3</version>
+                <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-    <repositories>
-        <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>central</id>
-            <name>bintray</name>
-            <url>https://jcenter.bintray.com</url>
-        </repository>
-    </repositories>
+    <profiles>
+        <profile>
+            <id>production</id>
+            <build>
+                <directory>production/</directory>
+            </build>
+        </profile>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.12.0</version>
+        <profile>
+            <id>changeFinalName</id>
+            <build>
+                <finalName>NewFinalName</finalName>
+            </build>
 
-            <scope>compile</scope> <!-- (default) code compilation + runtime + test -->
-<!--        <scope>provided</scope>     code compilation + test (lombok) -->
-<!--        <scope>runtime</scope>      runtime + test (jdbc) -->
-<!--        <scope>test</scope>         test (compile and runtime of tests)  -->
-
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+    </profiles>
 </project>
