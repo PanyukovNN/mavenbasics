@@ -8,8 +8,8 @@ public class MavenbasicsTest {
 
     @Test
     public void test() {
-        String v = "Hello";
+        String s = "Hello";
 
-        assertEquals("Hello", v);
+        assertEquals("Hello", s);
     }
 }

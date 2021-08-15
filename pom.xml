@@ -7,6 +7,7 @@
     <groupId>com.panyukovnn</groupId>
     <artifactId>mavenbasics</artifactId>
     <version>1.0</version>
+
     <packaging>jar</packaging>
 
     <name>Maven basics project</name>
@@ -15,6 +16,9 @@
 
     <properties>
         <junit.version>4.13.2</junit.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
     <repositories>
@@ -32,7 +36,7 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.12.0</version>
+            <version>${commons-lang3.version}</version>
 
             <scope>compile</scope> <!-- (default) code compilation + runtime + test -->
 <!--        <scope>provided</scope>     code compilation + test (lombok) -->
@@ -52,6 +56,7 @@
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
